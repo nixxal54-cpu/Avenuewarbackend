@@ -266,7 +266,7 @@ server {
     runtime: node
     plan: starter # or free
     region: oregon
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --legacy-peer-deps && npm run build
     startCommand: npm start
     healthCheckPath: /health
     autoDeploy: true
