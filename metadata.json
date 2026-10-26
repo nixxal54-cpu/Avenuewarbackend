@@ -1,0 +1,6 @@
+{
+  "name": "AVENUEWAR - Multiplayer Server & 3v3 Arena",
+  "description": "Production-ready authoritative multiplayer server and arena testing suite for AVENUEWAR 3v3 tactical shooter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

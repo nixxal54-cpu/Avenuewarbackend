@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: avenuewar-multiplayer
+    runtime: node
+    plan: starter # or 'free'
+    region: oregon
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "10000"
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: MAX_PLAYERS_PER_ROOM
+        value: "6"
+      - key: PLAYERS_PER_TEAM
+        value: "3"
+      - key: MATCH_DURATION_SECONDS
+        value: "300"
+      - key: SCORE_TO_WIN
+        value: "20"
+      - key: SERVER_TICK_RATE_HZ
+        value: "20"
+      - key: RECONNECT_TIMEOUT_MS
+        value: "30000"
+      - key: RATE_LIMIT_ACTIONS_PER_SEC
+        value: "35"
